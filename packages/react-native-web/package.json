@@ -1,8 +1,8 @@
 {
-  "name": "react-native-web-for-widget",
+  "name": "react-native-web",
   "version": "0.6.1",
-  "description": "React Native for Web",
-  "main": "src/index.js",
+  "description": "React Native for Web (with Widget support)",
+  "main": "dist/index.js",
   "files": [
     "dist",
     "jest",
