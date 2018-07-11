@@ -15,10 +15,11 @@ import prefixStyles from '../../modules/prefixStyles';
 const createDeclarationString = (prop, val) => {
   const name = hyphenateStyleName(prop);
   const value = normalizeValue(prop, val);
+  const flag = !name.startsWith('-') && !name.startsWith('pointer-') ? ' !important' : '';
   if (Array.isArray(val)) {
-    return val.map(v => `${name}:${v}`).join(';');
+    return val.map(v => `${name}:${v}${flag}`).join(';');
   }
-  return `${name}:${value}`;
+  return `${name}:${value}${flag}`;
 };
 
 /**
